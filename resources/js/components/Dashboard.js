@@ -17,7 +17,7 @@ export default class Dashboard extends Component {
             <div className="page-container">
                 <div className="main-content">
                     <TopCard/> 
-                    <BarChart/>
+                    {/* <BarChart/> */}
                     <Footer/>
                 </div>
             </div>

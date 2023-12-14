@@ -86,19 +86,19 @@ class ExpenseEdit extends Component {
                                         <div className="row">
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="expense_date">Expense Date</label>
+                                                    <label htmlFor="expense_date">Expense Date</label>
                                                     <input type="date" className="form-control" id="expense_date" placeholder="eg. Tuhin Khan" name="expense_date" value={this.state.expense_date} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="amount">Amount</label>
+                                                    <label htmlFor="amount">Amount</label>
                                                     <input type="text" className="form-control" id="amount" placeholder="eg. tuhin" name="amount" value={this.state.amount} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="description">Description</label>
+                                                    <label htmlFor="description">Description</label>
                                                     <input type="text" className="form-control" id="description" placeholder="eg. Buying Router" name="description" value={this.state.description} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>

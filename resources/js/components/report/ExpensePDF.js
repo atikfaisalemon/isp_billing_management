@@ -74,9 +74,9 @@ class ExpensePDF extends Component {
             <Page size="A4" style={styles.page} wrap>
               <View style={styles.section}>
                   <Image src='http://127.0.0.1:8000/assets/images/logo/logo.png' />
-                <Text style={styles.header}>FRIEND'S ISP</Text>
-                <Text style={styles.address}>Beki Chandragram,Sararchar,Bajitpur,Kishoreganj</Text>
-                <Text style={[styles.address]}>Phone:01681582093</Text>
+                <Text style={styles.header}>Signal Icon</Text>
+                <Text style={styles.address}>Uttara Sector 10</Text>
+                <Text style={[styles.address]}>Phone:01700000000</Text>
                 <Text style={[styles.borderStyle,styles.header2]}>Expense Report</Text>
                 <View style={styles.row}>
                     <Text style={[[styles.col,styles.th,styles.w10]]}>SL</Text>

@@ -46,15 +46,15 @@ class Login extends Component {
                     <div className="row no-gutters h-100 full-height">
                         <div className="col-lg-4 d-none d-lg-flex bg" style={{backgroundImage: "url(" + 'assets/images/others/login-1.jpg' + ")"}} >
                             <div className="d-flex h-100 p-h-40 p-v-15 flex-column justify-content-between">
-                                <div>
+                                {/* <div>
                                     <img src="assets/images/logo/easy-logo-white.png" alt=""/>
-                                </div>
+                                </div> */}
                                 <div>
-                                    <h1 className="text-white m-b-20 font-weight-normal">Friend's ISP</h1>
+                                    <h1 className="text-white m-b-20 font-weight-normal">Signal Icon</h1>
                                     <p className="text-white font-size-16 lh-2 w-80 opacity-08"></p>
                                 </div>
                                 <div className="d-flex justify-content-between">
-                                    <span className="text-white">© 2020 TUHIN KHAN</span>
+                                    <span className="text-white">© 2023 Atik Faisal Emon</span>
                                     
                                 </div>
                             </div>
@@ -65,16 +65,17 @@ class Login extends Component {
                                     <div className="col-md-8 col-lg-7 col-xl-6 mx-auto">
                                         <h2>Sign In</h2>
                                         <p className="m-b-30">Enter your credential to get access</p>
+                                        {/* Login form */}
                                         <form  onSubmit={(e)=>this.handleForm(e)}>
                                             <div className="form-group">
-                                                <label className="font-weight-semibold" for="email">Email:</label>
+                                                <label className="font-weight-semibold" htmlFor="email">Email:</label>
                                                 <div className="input-affix">
                                                     <i className="prefix-icon anticon anticon-user"></i>
                                                     <input type="email" name='email' className="form-control" id="email" placeholder="Email" value={this.state.email} onChange={(e)=>this.changeInput(e)}/>
                                                 </div>
                                             </div>
                                             <div className="form-group">
-                                                <label className="font-weight-semibold" for="password">Password:</label>
+                                                <label className="font-weight-semibold" htmlFor="password">Password:</label>
                                                 <a className="float-right font-size-13 text-muted" href="">Forget Password?</a>
                                                 <div className="input-affix m-b-10">
                                                     <i className="prefix-icon anticon anticon-lock"></i>

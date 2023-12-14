@@ -2,6 +2,7 @@ import Axios from 'axios'
 import {public_url} from '../config'
 import Cookies from 'js-cookie'
 import { useHistory  } from "react-router-dom";
+
 export const postLogin=(data)=>{
     return  Axios.post(public_url+'api/auth/login',data).then((res)=>{
         Axios.defaults.headers.common['Authorization'] = 'Bearer '+res.data.access_token;

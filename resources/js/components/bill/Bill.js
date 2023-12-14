@@ -90,7 +90,7 @@ export default class Bill extends Component {
                                         <div className="col-sm-6">
                                         
                                                 <div className="form-group">
-                                                <label for="bill_date"> Select Client</label>
+                                                <label htmlFor="bill_date"> Select Client</label>
                                                 <Select
                                                         onChange={this.handleChange}
                                                         options={this.state.options}
@@ -101,19 +101,19 @@ export default class Bill extends Component {
 
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="bill_date"> Date</label>
+                                                    <label htmlFor="bill_date"> Date</label>
                                                     <input type="date" className="form-control" id="bill_date" placeholder="eg. Tuhin Khan" name="bill_date" value={this.state.bill_date} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="amount">Amount</label>
+                                                    <label htmlFor="amount">Amount</label>
                                                     <input type="text" className="form-control" id="amount" placeholder="eg. 5000" name="amount" value={this.state.amount} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="remarks">Remark</label>
+                                                    <label htmlFor="remarks">Remark</label>
                                                     <input type="text" className="form-control" id="remarks" placeholder="eg." name="remarks" value={this.state.remarks} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>

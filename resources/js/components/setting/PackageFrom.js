@@ -78,13 +78,13 @@ class PackageForm extends Component {
                                         <div className="row">
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="packageName">Package Name</label>
+                                                    <label htmlFor="packageName">Package Name</label>
                                                     <input type="text" className="form-control" id="packageName" placeholder="eg. 1GB" name="packageName" value={this.state.packageName} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="price">Price</label>
+                                                    <label htmlFor="price">Price</label>
                                                     <input type="text" className="form-control" id="price" placeholder="eg. Package Price" name="price" value={this.state.price} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>

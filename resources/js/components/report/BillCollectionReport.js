@@ -84,7 +84,7 @@ export default class BillCollectionReport extends Component {
                                         <div className="row">
                                         <div className="col-sm-4">                                        
                                                 <div className="form-group">
-                                                <label for="year"> Select Client</label>
+                                                <label htmlFor="year"> Select Client</label>
                                                 <select className='form-control' name="year" onChange={(e)=>this.changeInput(e)} required>
                                                     <option disabled selected>Select Year</option>
                                                     <option value="2021">2021</option>
@@ -97,7 +97,7 @@ export default class BillCollectionReport extends Component {
                                             </div>
                                             <div className="col-sm-4">                                        
                                                 <div className="form-group">
-                                                <label for="month"> Select Month</label>
+                                                <label htmlFor="month"> Select Month</label>
                                                 <select className='form-control' name="month" onChange={(e)=>this.changeInput(e)} required>
                                                     <option disabled selected>Select month</option>
                                                     <option value="1">January</option>

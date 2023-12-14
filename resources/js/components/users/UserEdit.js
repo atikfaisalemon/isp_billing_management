@@ -88,27 +88,27 @@ class UserEdit extends Component {
                                         <div className="row">
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="name">Name</label>
+                                                    <label htmlFor="name">Name</label>
                                                     <input type="text" className="form-control" id="name" placeholder="eg. Tuhin Khan" name="name" value={this.state.name} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="email">Email</label>
+                                                    <label htmlFor="email">Email</label>
                                                     <input type="email" className="form-control" id="email" placeholder="eg. uiu.tuhin@gmail.com" name="email" value={this.state.email} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>
 
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="password">Password</label>
+                                                    <label htmlFor="password">Password</label>
                                                     <input type="password" className="form-control" id="password" placeholder="eg. 123456" name="password" value={this.state.password} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>
 
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="password_confirmation">Confirm Password</label>
+                                                    <label htmlFor="password_confirmation">Confirm Password</label>
                                                     <input type="password" className="form-control" id="password_confirmation" placeholder="eg. 123456" name="password_confirmation" value={this.state.password_confirmation} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>

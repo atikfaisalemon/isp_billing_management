@@ -90,7 +90,7 @@ export default class ReportIndex extends Component {
                                         <div className="row">
                                         <div className="col-sm-4">                                        
                                                 <div className="form-group">
-                                                <label for="bill_date"> Select Client</label>
+                                                <label htmlFor="bill_date"> Select Client</label>
                                                 <select className='form-control' name="type" onChange={(e)=>this.changeInput(e)}>
                                                     <option disabled selected>Select Type</option>
                                                     <option value="1">Expense</option>
@@ -102,13 +102,13 @@ export default class ReportIndex extends Component {
 
                                             <div className="col-sm-4">
                                                 <div className="form-group">
-                                                    <label for="from_date"> From Date</label>
+                                                    <label htmlFor="from_date"> From Date</label>
                                                     <input type="date" className="form-control" id="from_date" placeholder="eg. Tuhin Khan" name="from_date" value={this.state.from_date} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>
                                             <div className="col-sm-4">
                                                 <div className="form-group">
-                                                    <label for="to_date"> To Date</label>
+                                                    <label htmlFor="to_date"> To Date</label>
                                                     <input type="date" className="form-control" id="to_date" placeholder="eg. Tuhin Khan" name="to_date" value={this.state.to_date} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>

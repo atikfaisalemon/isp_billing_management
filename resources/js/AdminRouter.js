@@ -26,7 +26,7 @@ import BillHistory from './components/bill/BillHistory'
 import BillCollectionReport from './components/report/BillCollectionReport'
 
 
-import { Switch, Route} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import GuestRoute from './GuestRoute'
 import ProtectedRoute from './ProtectedRoute'
 
@@ -34,37 +34,37 @@ import ProtectedRoute from './ProtectedRoute'
 export default class AdminRouter extends Component {
   render() {
     return (
-            <Switch>
-                    <GuestRoute exact path="/" component={Login} />
-                    <ProtectedRoute exact path="/dashboard" component={Dashboard} />
+      <Switch>
+        <GuestRoute exact path="/" component={Login} />
+        <ProtectedRoute exact path="/dashboard" component={Dashboard} />
 
-                    <ProtectedRoute exact path="/clients" component={Client} />
-                    <ProtectedRoute exact path="/client/new" component={ClientForm} />
-                    <ProtectedRoute exact path="/client/edit/:id" component={ClientEdit} />
+        <ProtectedRoute exact path="/clients" component={Client} />
+        <ProtectedRoute exact path="/client/new" component={ClientForm} />
+        <ProtectedRoute exact path="/client/edit/:id" component={ClientEdit} />
 
-                    <ProtectedRoute exact path="/user" component={User} />
-                    <ProtectedRoute exact path="/user/new" component={UserForm} />
-                    <ProtectedRoute exact path="/user/edit/:id" component={UserEdit} />
-
-
-                    <ProtectedRoute exact path="/setting" component={Setting} />
-                    <ProtectedRoute exact path="/package/new" component={PackageFrom} />
-                    <ProtectedRoute exact path="/package/edit/:id" component={PackageEdit} />
-
-                    <ProtectedRoute exact path="/expense" component={Expense} />
-                    <ProtectedRoute exact path="/expense/new" component={ExpenseFrom} />
-                    <ProtectedRoute exact path="/expense/edit/:id" component={ExpenseEdit} />
-
-                    <ProtectedRoute exact path="/bill" component={BillList} />
-                    <ProtectedRoute exact path="/bill/new" component={Bill} />
-                    <ProtectedRoute exact path="/bill/collection/report" component={BillCollectionReport} />
-                    <ProtectedRoute exact path="/client/history/:id" component={BillHistory} />
-                    <ProtectedRoute exact path="/report" component={ReportIndex} />
+        <ProtectedRoute exact path="/user" component={User} />
+        <ProtectedRoute exact path="/user/new" component={UserForm} />
+        <ProtectedRoute exact path="/user/edit/:id" component={UserEdit} />
 
 
-                    <ProtectedRoute path="*" component={NotFound}/> 
-                </Switch>
-            
+        <ProtectedRoute exact path="/setting" component={Setting} />
+        <ProtectedRoute exact path="/package/new" component={PackageFrom} />
+        <ProtectedRoute exact path="/package/edit/:id" component={PackageEdit} />
+
+        <ProtectedRoute exact path="/expense" component={Expense} />
+        <ProtectedRoute exact path="/expense/new" component={ExpenseFrom} />
+        <ProtectedRoute exact path="/expense/edit/:id" component={ExpenseEdit} />
+
+        <ProtectedRoute exact path="/bill" component={BillList} />
+        <ProtectedRoute exact path="/bill/new" component={Bill} />
+        <ProtectedRoute exact path="/bill/collection/report" component={BillCollectionReport} />
+        <ProtectedRoute exact path="/client/history/:id" component={BillHistory} />
+        <ProtectedRoute exact path="/report" component={ReportIndex} />
+
+
+        <ProtectedRoute path="*" component={NotFound} />
+      </Switch>
+
     )
   }
 }

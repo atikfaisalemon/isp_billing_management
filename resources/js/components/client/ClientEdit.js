@@ -99,19 +99,19 @@ class ClientEdit extends Component {
                                         <div className="row">
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="clientName">Client Name</label>
+                                                    <label htmlFor="clientName">Client Name</label>
                                                     <input type="text" className="form-control" id="clientName" placeholder="eg. Tuhin Khan" name="clientName" value={this.state.clientName} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="userName">User Name</label>
+                                                    <label htmlFor="userName">User Name</label>
                                                     <input type="text" className="form-control" id="userName" placeholder="eg. tuhin" name="userName" value={this.state.userName} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="package">Package</label>
+                                                    <label htmlFor="package">Package</label>
                                                     <select className="form-control" name="package" onChange={(e)=>this.changeInput(e)} value={this.state.package}>
                                                     <option selected disabled>Select Package</option>
                                                     {this.state.packageList.map(item => (
@@ -124,14 +124,14 @@ class ClientEdit extends Component {
                                             </div>
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="address">Address</label>
+                                                    <label htmlFor="address">Address</label>
                                                     <input type="text" className="form-control" id="address" placeholder="eg. Bhagalpur" name="address" value={this.state.address} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>
                                             
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    <label for="phone">Phone </label>
+                                                    <label htmlFor="phone">Phone </label>
                                                     <input type="text" className="form-control" id="phone"  name="phone" value={this.state.phone} onChange={(e)=>this.changeInput(e)} />
                                                 </div>
                                             </div>

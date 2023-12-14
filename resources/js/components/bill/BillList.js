@@ -104,7 +104,7 @@ export default class BillList extends Component {
                     
                     <div className="main-content">
                         <div className="page-header">
-                            <h2 className="header-title">Bill</h2>
+                            <h2 className="header-title">Bill </h2>
                             <div className="header-sub-title">
                                 <nav className="breadcrumb breadcrumb-dash">
                                     <Link to="/dashboard" className="breadcrumb-item"><i className="anticon anticon-home m-r-5"></i>Home</Link>
@@ -115,7 +115,7 @@ export default class BillList extends Component {
                         <div className="card">
                             <div className="card-body">
                                 <h4>Bill List
-                                <Link className="btn btn-success btn-sm" style={{float:"right"}} to="/bill/new">+ Add Bill</Link>
+                                <Link className="btn btn-success btn-sm" style={{float:"right"}} to="/bill/new">+ Bill Collection</Link>
                                 <Link className="btn btn-success btn-sm" style={{float:"right",marginRight:'5px'}} to="/bill/collection/report">Collection Report</Link>
                                     
                                 </h4>
