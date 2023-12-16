@@ -29,6 +29,7 @@ import BillCollectionReport from './components/report/BillCollectionReport'
 import { Switch, Route } from "react-router-dom";
 import GuestRoute from './GuestRoute'
 import ProtectedRoute from './ProtectedRoute'
+import ClientDashboard from './components/client_dashboard/ClientDashboard'
 
 
 export default class AdminRouter extends Component {
@@ -36,6 +37,7 @@ export default class AdminRouter extends Component {
     return (
       <Switch>
         <GuestRoute exact path="/" component={Login} />
+        <GuestRoute exact path="/client_dashboard" component={ClientDashboard} />
         <ProtectedRoute exact path="/dashboard" component={Dashboard} />
 
         <ProtectedRoute exact path="/clients" component={Client} />

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import {postLogin,userAuthenticationCheck} from '../services/auth'
 import {connect} from 'react-redux'
 import Cookies from 'js-cookie'
+import {Link} from "react-router-dom"
+import logo from "../img/logo.jpg"
 
 class Login extends Component {
     constructor(props) {
@@ -103,11 +105,19 @@ class Login extends Component {
                                                 </div>
                                             </div>
                                         </form>
+                                        <p>Customer Login <Link to="/client_dashboard">Here</Link> </p>
                                     </div>
+          
+                                        
                                 </div>  
                             </div>
                         </div>
                     </div>
+                    
+                </div>
+                <div className='container'>
+
+                                    <Footer />
                 </div>
             </>
         )
@@ -120,3 +130,40 @@ const mapDispatchToProps=dispatch=>{
     }
 }
 export default  connect(null,mapDispatchToProps)(Login);
+
+function Footer() {
+    return <footer className="pt-4 my-md-5 pt-md-5 border-top">
+        <div className="row">
+            <div className="col-12 col-md">
+                <img className="mb-2" src={logo} alt="" width="80" height="80" />
+                <small className="d-block mb-3 text-muted">&copy; 2023-2024</small>
+            </div>
+            <div className="col-6 col-md">
+                <h5>Address</h5>
+                <ul className="list-unstyled text-small">
+                    <li><a className="text-muted" href="#">Uttara Sector 10</a></li>
+                    <li><a className="text-muted" href="#">Road 20</a></li>
+                    <li><a className="text-muted" href="#">House 32</a></li>
+                </ul>
+            </div>
+            <div className="col-6 col-md">
+                <h5>Service</h5>
+                <ul className="list-unstyled text-small">
+                    <li><a className="text-muted" href="#">Support Number</a></li>
+                    <li><a className="text-muted" href="#">+8801712965007</a></li>
+                    <li><a className="text-muted" href="#">Payment Support</a></li>
+                    <li><a className="text-muted" href="#">+8801789393745</a></li>
+                </ul>
+            </div>
+            <div className="col-6 col-md">
+                <h5>Find Us</h5>
+                <ul className="list-unstyled text-small">
+                    <li><a className="text-muted" href="https://wwww.facebook.com/signalicon">Facebook</a></li>
+                    <li><a className="text-muted" href="#">Youtube/signalicon</a></li>
+                    <li><a className="text-muted" href="#">Email</a></li>
+                    <li><a className="text-muted" href="#">signalicongp@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+}

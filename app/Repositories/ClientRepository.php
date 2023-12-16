@@ -16,6 +16,15 @@ class ClientRepository implements CrudInterface{
         $client = Client::with('package')->where([['id',$id]])->first();
         return $client;
     }
+    public function findByUsernameAndPhone($username, $phone)
+    {
+        $client = Client::with('package')
+            ->where('user_name', $username)
+            ->where('phone', $phone)
+            ->first();
+
+        return $client;
+    }
     public function update(Request $request,$id){
         $client = Client::where([['id',$id]])->first();
         $client->client_name  = $request->clientName;

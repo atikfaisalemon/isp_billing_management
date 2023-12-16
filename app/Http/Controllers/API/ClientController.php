@@ -5,15 +5,18 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Repositories\ClientRepository;
+use App\Repositories\BillRepository;
 
 class ClientController extends Controller
 {
     public $clientRepository;
+    public $billRepository;
 
-    public function __construct(ClientRepository $clientRepository)
+    public function __construct(ClientRepository $clientRepository,BillRepository $billRepository)
     {
         $this->clientRepository = $clientRepository;
-        $this->middleware('auth:api');
+        $this->billRepository = $billRepository;
+        // $this->middleware('auth:api');
     }
 
     public function index(){
@@ -57,6 +60,42 @@ class ClientController extends Controller
             'message' => 'client',
             'data' => $client
         ]);
+    }
+// 
+    public function find(Request $request)
+    {
+        $data = $request->json()->all();
+
+        $username = $data['username'] ?? null;
+        $phone = $data['phone'] ?? null;
+        $client = $this->clientRepository->findByUsernameAndPhone($username, $phone);
+        
+        if(!$client){
+            return response()->json([
+                'success' => false,
+                'message' => 'User not found',
+                'data' => null
+            ]);
+        }
+        $bill = $this->billRepository->getAllbyClient($client->id);
+        if(!$bill){
+            return response()->json([
+                'success' => true,
+                'message' => 'bill',
+                'data' => null
+            ]);
+        }
+        return response()->json([
+            'success' => true,
+            'message' => 'bill',
+            'data' => $bill,
+            'client' => $client,
+        ]);
+        // return response()->json([
+        //     'success' => true,
+        //     'message' => 'client',
+        //     'data' => $client
+        // ]);
     }
 
     public function store(Request $request){
