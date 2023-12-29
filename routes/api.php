@@ -30,4 +30,6 @@ Route::apiResource('client', ClientController::class);
 Route::post('/client/find',[ClientController::class,'find']);
 Route::apiResource('expense', ExpenseController::class);
 Route::apiResource('bill', BillController::class);
+Route::post('/bill/statusupdate/{id}',[BillController::class,'updateStatus']);
+Route::post('/bill/client',[BillController::class,'storeByClient']);
 Route::apiResource('user', UserController::class);

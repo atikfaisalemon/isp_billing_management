@@ -15,7 +15,7 @@ class BillController extends Controller
     public function __construct(BillRepository $billRepository)
     {
         $this->billRepository = $billRepository;
-        $this->middleware('auth:api');
+        // $this->middleware('auth:api');
     }
 
     public function index(){
@@ -68,6 +68,29 @@ class BillController extends Controller
         ]);
     }
 
+    public function storeByClient(Request $request){
+        $formData = $request->all();
+        $validator = \Validator::make($formData,[
+            'bill_date' =>'required',
+            'amount' =>'required',
+            'client' =>'required',
+            'remarks' =>'required',
+        ]);
+
+        if($validator->fails()){
+            return response()->json([
+                'success'=>false,
+                'error'=>$validator->getMessageBag()->first()
+            ]);
+        }
+
+        $bill = $this->billRepository->createByClient($request);
+        return response()->json([
+                'success'=>true,
+                'message'=>'Data stored succesfully'
+        ]);
+    }
+
     public function update(Request $request,$id){
         $formData = $request->all();
         $validator = \Validator::make($formData,[
@@ -89,6 +112,27 @@ class BillController extends Controller
                 'message'=>'Data stored succesfully'
         ]);
     }
+
+    public function updateStatus(Request $request,$id){
+        $formData = $request->all();
+        $validator = \Validator::make($formData,[
+            'status' =>'required'
+        ]);
+
+        if($validator->fails()){
+            return response()->json([
+                'success'=>false,
+                'error'=>$validator->getMessageBag()->first()
+            ]);
+        }
+
+        $bill = $this->billRepository->updateStatus($request,$id);
+        return response()->json([
+                'success'=>true,
+                'message'=>'Data stored succesfully'
+        ]);
+    }
+
     public function destroy($id)
     {
         $oldbill= $this->billRepository->findById($id);

@@ -77,7 +77,7 @@ class ReportController extends Controller
         $clientRepo = new ClientRepository();
         $client = $clientRepo->getAll();
         foreach($client as $row=>$val){
-          $bill[$val->id] = Bill::whereMonth('collection_date', $request->month)->whereYear('collection_date', $request->year)->where('client_id',$val->id)->sum('amount');
+          $bill[$val->id] = Bill::whereMonth('collection_date', $request->month)->whereYear('collection_date', $request->year)->where('client_id',$val->id)->where('status', 1)->sum('amount');
         }
 
         return response()->json([

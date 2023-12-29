@@ -20,7 +20,7 @@ class DashboardController extends Controller
         $data['totalClient']=Client::where('status',1)->count();
         $data['newClient'] = Client::whereMonth('created_at', Carbon::now()->month)->whereYear('created_at', Carbon::now()->year)->count();
         $data['expense'] = Expense::whereMonth('expense_date', Carbon::now()->month)->whereYear('expense_date', Carbon::now()->year)->sum('amount');
-        $data['bill'] = Bill::whereMonth('collection_date', Carbon::now()->month)->whereYear('collection_date', Carbon::now()->year)->sum('amount');
+        $data['bill'] = Bill::whereMonth('collection_date', Carbon::now()->month)->whereYear('collection_date', Carbon::now()->year)->where('status', 1)->sum('amount');
         return response()->json([
             'success' => true,
             'message' => 'package List',

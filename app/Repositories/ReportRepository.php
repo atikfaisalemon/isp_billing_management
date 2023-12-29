@@ -17,11 +17,11 @@ class ReportRepository{
     }
 
     public function billReport(Request $request){
-        $bill = Bill::with('clientName')->whereBetween('collection_date', [$request->from_date, $request->to_date])->orderby('collection_date','DESC')->get();
+        $bill = Bill::with('clientName')->whereBetween('collection_date', [$request->from_date, $request->to_date])->where('status', 1)->orderby('collection_date','DESC')->get();
         return $bill;
     }
     public function billTotal(Request $request){
-        $Bill = Bill::whereBetween('collection_date', [$request->from_date, $request->to_date])->orderby('collection_date','DESC')->sum('amount');
+        $Bill = Bill::whereBetween('collection_date', [$request->from_date, $request->to_date])->orderby('collection_date','DESC')->where('status', 1)->sum('amount');
         return $Bill;
     }
 
